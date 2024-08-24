@@ -39,7 +39,7 @@ class _SalaDetalhesScreenState extends State<SalaDetalhesScreen> {
     Navigator.push(
       context,
       MaterialPageRoute(
-        builder: (context) => RecognizeFaceScreen(camera: firstCamera),
+        builder: ()
       ),
     );
   }

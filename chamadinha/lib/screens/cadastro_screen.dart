@@ -54,16 +54,16 @@ class _CadastroScreenState extends State<CadastroScreen> {
         padding: const EdgeInsets.all(16.0),
         child: Column(
           children: [
-            CustomTextField(
+            TextField(
               controller: _nameController,
               label: 'Nome',
             ),
-            CustomTextField(
+            TextField(
               controller: _emailController,
               label: 'Email',
               keyboardType: TextInputType.emailAddress,
             ),
-            CustomTextField(
+            TextField(
               controller: _passwordController,
               label: 'Senha',
               obscureText: true,
@@ -82,7 +82,7 @@ class _CadastroScreenState extends State<CadastroScreen> {
               decoration: InputDecoration(labelText: 'Selecione o papel'),
             ),
             SizedBox(height: 20),
-            CustomButton(
+            Button(
               text: 'Cadastrar',
               onPressed: _register,
             ),

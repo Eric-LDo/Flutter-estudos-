@@ -26,7 +26,7 @@ class Routes {
       case salaDetalhes:
         final String salaId = settings.arguments as String;
         return MaterialPageRoute(
-          builder: (_) => SalaDetalhesScreen(salaId: salaId),
+          builder: (_) => SalaDetalhesScreen(),
         );
       case alunoHome:
         return MaterialPageRoute(builder: (_) => AlunoHomeScreen());
