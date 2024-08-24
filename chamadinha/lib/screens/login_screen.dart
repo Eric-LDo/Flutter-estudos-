@@ -1,5 +1,4 @@
-// ignore_for_file: use_key_in_widget_constructors, library_private_types_in_public_api, use_build_context_synchronously, prefer_const_constructors
-
+// lib/screens/login_screen.dart
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import '../routes.dart';
@@ -40,32 +39,28 @@ class _LoginScreenState extends State<LoginScreen> {
         padding: const EdgeInsets.all(16.0),
         child: Column(
           children: [
-            TextField(
+            CustomTextField(
               controller: _emailController,
+              label: 'Email',
               keyboardType: TextInputType.emailAddress,
-              decoration: InputDecoration(
-                hintText: 'Email',
-              )
             ),
-            TextField(
+            CustomTextField(
               controller: _passwordController,
+              label: 'Senha',
               obscureText: true,
-              decoration: InputDecoration(
-                hintText: 'Senha',
-              )
             ),
             SizedBox(height: 20),
-            Button(
+            CustomButton(
               text: 'Entrar',
               onPressed: _login,
             ),
             SizedBox(height: 10),
             TextButton(
-                onPressed: () {
-                      Navigator.pushNamed(context, Routes.cadastro);
-                },
-                child: Text('Cadastre-se'),
-            )
+              onPressed: () {
+                Navigator.pushNamed(context, Routes.cadastro);
+              },
+              child: Text('Cadastre-se'),
+            ),
           ],
         ),
       ),

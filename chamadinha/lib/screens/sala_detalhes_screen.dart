@@ -1,5 +1,4 @@
-// ignore_for_file: use_build_context_synchronously, use_key_in_widget_constructors, library_private_types_in_public_api, unused_field, prefer_final_fields, prefer_const_constructors
-
+// lib/screens/sala_detalhes_screen.dart
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:camera/camera.dart';
@@ -39,7 +38,7 @@ class _SalaDetalhesScreenState extends State<SalaDetalhesScreen> {
     Navigator.push(
       context,
       MaterialPageRoute(
-        builder: ()
+        builder: (context) => RecognizeFaceScreen(camera: firstCamera),
       ),
     );
   }

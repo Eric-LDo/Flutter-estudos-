@@ -1,5 +1,4 @@
-// ignore_for_file: use_key_in_widget_constructors, library_private_types_in_public_api, prefer_const_constructors, use_build_context_synchronously
-
+// lib/screens/cadastro_screen.dart
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -54,16 +53,16 @@ class _CadastroScreenState extends State<CadastroScreen> {
         padding: const EdgeInsets.all(16.0),
         child: Column(
           children: [
-            TextField(
+            CustomTextField(
               controller: _nameController,
               label: 'Nome',
             ),
-            TextField(
+            CustomTextField(
               controller: _emailController,
               label: 'Email',
               keyboardType: TextInputType.emailAddress,
             ),
-            TextField(
+            CustomTextField(
               controller: _passwordController,
               label: 'Senha',
               obscureText: true,
@@ -82,7 +81,7 @@ class _CadastroScreenState extends State<CadastroScreen> {
               decoration: InputDecoration(labelText: 'Selecione o papel'),
             ),
             SizedBox(height: 20),
-            Button(
+            CustomButton(
               text: 'Cadastrar',
               onPressed: _register,
             ),
