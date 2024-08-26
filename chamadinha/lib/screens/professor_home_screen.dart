@@ -1,8 +1,7 @@
-// ignore_for_file: use_key_in_widget_constructors, prefer_const_constructors
-
+// lib/screens/professor_home_screen.dart
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import '../routes.dart';
+import 'package:chamadinha/routes.dart';
 
 class ProfessorHomeScreen extends StatelessWidget {
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;

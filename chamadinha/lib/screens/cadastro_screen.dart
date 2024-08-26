@@ -2,9 +2,9 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import '../routes.dart';
-import '../widgets/custom_text_field.dart';
-import '../widgets/custom_button.dart';
+import 'package:chamadinha/routes.dart';
+import 'package:chamadinha/widgets/custom_text_field.dart';
+import 'package:chamadinha/widgets/custom_button.dart';
 
 class CadastroScreen extends StatefulWidget {
   @override

@@ -1,6 +1,4 @@
-
-// ignore_for_file: prefer_const_constructors_in_immutables, use_key_in_widget_constructors, library_private_types_in_public_api, prefer_const_constructors
-
+// lib/screens/recognize_face_screen.dart
 import 'package:flutter/material.dart';
 import 'package:camera/camera.dart';
 import 'package:google_ml_vision/google_ml_vision.dart';
@@ -43,7 +41,7 @@ class _RecognizeFaceScreenState extends State<RecognizeFaceScreen> {
       _isDetecting = true;
 
       final GoogleVisionImage visionImage =
-          GoogleVisionImage.fromBytes(image.planes[0].bytes, _buildMetaData(image));
+      GoogleVisionImage.fromBytes(image.planes[0].bytes, _buildMetaData(image));
       final FaceDetector faceDetector = GoogleVision.instance.faceDetector();
 
       final List<Face> faces = await faceDetector.processImage(visionImage);

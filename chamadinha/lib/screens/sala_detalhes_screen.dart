@@ -2,9 +2,14 @@
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:camera/camera.dart';
+import '../screens/recognize_face_screen.dart'; // Certifique-se de que este arquivo existe e foi importado corretamente
 import 'package:intl/intl.dart';
 
 class SalaDetalhesScreen extends StatefulWidget {
+  final String salaId; // Recebe o ID da sala como argumento
+
+  SalaDetalhesScreen({required this.salaId});
+
   @override
   _SalaDetalhesScreenState createState() => _SalaDetalhesScreenState();
 }
@@ -45,8 +50,6 @@ class _SalaDetalhesScreenState extends State<SalaDetalhesScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final salaId = ModalRoute.of(context)!.settings.arguments as String;
-
     return Scaffold(
       appBar: AppBar(
         title: Text('Detalhes da Sala'),
